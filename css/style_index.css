@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --font: 'Roboto', sans-serif ;
+}
+.containerId{
+    margin: auto;
+    width: 40vw;
+    height: 550px;
+    background: #FFEFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--font);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.containerCN{
+    position: absolute;
+    top:0;
+    left: 29vw;
+    margin: auto;
+    width: 40vw;
+    height: 750px;
+    background:  #FFEFEF;
+    font-family: var(--font);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 0px;
+
+    opacity: 0;
+    transform: translateX(80%);
+    transition: transform 1s ease-in;
+}
+.iden{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+}
+.sub{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;;
+}
+.email{
+    width: 100%;
+    background: #FCF5E3;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 0px 200px 10px 10px;
+    
+}
+.btn_ingresar, .btn_registrar{
+    background: #000000;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.nuevo, .existente{
+    color: #000;
+}
+.containerId div{
+    width: 100%;
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center ;
+}
+.subs{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+}
+.containerCN h4{
+    margin-bottom: 20px;;
+}
+.options{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.options h3{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.cliente-nuevo-activo{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.sx{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:900px){
+    .email,  #confirm_password{
+        width: 90%;
+    }
+    .containerCN, .containerId{
+        width: 90vw;
+    }
+    .containerCN{
+        left: 35px;
+    }
+}
+@media screen and (max-width:700px){
+    .containerCN{
+        left: 25px;
+    }
+}
+@media screen and (max-width:500px){
+    .containerCN{
+        left: 15px;
+    }
+}
+@media screen and (max-width:300px){
+    .containerCN{
+        left: 10px;
+    }
+}

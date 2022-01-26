@@ -1,0 +1,28 @@
+.card-header {
+	font-family:arial;
+	font-size:20px;
+}
+p {
+	font-size: 15px;
+}
+.activo {
+	background-color: #3498db;
+	margin:0px, 10px, 0px, 0px;
+	padding:15px 20px;
+	font: 20px arial;
+	color:white;
+}
+.otros {
+	background-color: silver;
+	margin:0px, 10px, 0px, 0px;
+	padding:15px 20px;
+	font: 20px arial;
+	color:white;	
+}
+span {
+	font-size: 20px;
+}
+.enlace {
+	   text-decoration:none;
+	   color:black;
+}

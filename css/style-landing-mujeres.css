@@ -1,0 +1,177 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    background: linear-gradient(0deg, #FFFFFF 0%, #f6d4f3 82.15%);
+    background-attachment: fixed;
+    /*para que el fonde quede fijoooooo*/
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --font: 'Playfair Display', serif;
+    --font-size-1: 21px;
+    --font-size-2: 19px;
+    --font-size-3: 17px;
+}
+
+.menu {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu li a {
+    font-family: var(--font);
+    font-size: var(--font-size-1);
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.slider {
+    display: flex;
+    width: 100vw;
+    height: 45vh;
+    border: solid 1px;
+    margin-bottom: 20px;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    /*asi no le permitimos que se encoja, si no que ocupe todo su espacio del padre*/
+}
+
+.ropa {
+    margin: 20px 0px;
+    width: 80vw;
+    height: auto;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    /*auto-fit hace que se generen columnas segun el espacio que queda*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    justify-content: space-evenly;
+}
+
+.producto {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 100%;
+    text-align: center;
+}
+
+.producto img {
+    width: 90%;
+    object-fit: cover;
+    border: solid 1px;
+}
+
+.producto h3,
+.producto span {
+    margin-bottom: 8px;
+    font-size: var(--font-size-2);
+}
+
+.conf,
+.add {
+    font-size: var(--font-size-3);
+    font-family: var(--font);
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border: 1px solid #000000;
+    border-radius: 11px;
+    margin: 5px 0px;
+}
+
+.conf {
+    background: #000;
+    color: #fff;
+}
+
+.add {
+    background: #f6d4f3;
+}
+
+
+/*nav para mobiles*/
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    margin: 4px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:750px) {
+    .menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        overflow-x: hidden;
+        /*esconda lo que mide mas de 54a en w*/
+    }
+    .menu {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        height: 100%;
+        width: 60%;
+        background: #f6d4f3;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        /*esconder esta parte*/
+        transition: transform 1s ease;
+        z-index: 1200;
+    }
+    .burger {
+        display: block;
+        /*para que aparezca*/
+    }
+    .menu-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.menu-active {
+    transform: translateX(0%);
+    z-index: 1200;
+}
