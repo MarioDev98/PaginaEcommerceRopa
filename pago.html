@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/likid.png">
+    <link rel="stylesheet" href="css/css-pago.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <script src="js/jquery.payform.min.js" charset="utf-8"></script>
+    <script src="js/script_pago.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likid - Pago</title>
+</head>
+
+<body>
+    
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="principal.html"><img src="images/likid.png" alt="image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="nav-link" href="#">Buscar
+                                <img src="images/buscar.png" alt="#" width="30px" height="30px" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">
+                                <img src="images/ubicacion.png" alt="" width="30px" height="30px">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">
+                                <img src="images/perfil.png" alt="" width="30px" height="30px">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="carrito.html">
+                                <img src="images/carrito.png" alt="" width="30px" height="30px">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">
+                                <img src="images/corazon.png" alt="" width="30px" height="30px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <br><br><br>
+    <div class="creditCardForm">
+        <div class="heading">
+            <h1>Añadir tarjeta de débito o crédito</h1>
+        </div>
+        <div class="payment">
+            <form>
+                <div class="form-group owner">
+                    <label for="owner">Titular de la tarjeta:</label>
+                    <input type="text" class="form-control" id="owner">
+                </div>
+                <div class="form-group CVV">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="form-control" id="cvv">
+                </div>
+                <div class="form-group" id="card-number-field">
+                    <label for="cardNumber">Número de Tarjeta:</label>
+                    <input type="text" class="form-control" id="cardNumber">
+                </div>
+                <div class="form-group" id="expiration-date">
+                    <label>Fecha de expiración:</label>
+                    <select>
+                        <option value="01">01</option>
+                        <option value="02">02 </option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select>
+                        <option value="16"> 2020</option>
+                        <option value="17"> 2021</option>
+                        <option value="18"> 2022</option>
+                        <option value="19"> 2023</option>
+                        <option value="20"> 2024</option>
+                        <option value="21"> 2025</option>
+                    </select>
+                </div>
+                <div class="form-group" id="credit_cards">
+                    <img src="images/visa.jpg" id="visa">
+                    <img src="images/mastercard.jpg" id="mastercard">
+                    <img src="images/amex.jpg" id="amex">
+                </div>
+                <div class="form-group" id="pay-now">
+                    <button type="submit" class="btn btn-default" id="confirm-purchase">Pagar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

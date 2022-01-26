@@ -1,0 +1,39 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['user'])){
+ ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="images/likid.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Likid: ropa en línea</title>
+    <link rel="stylesheet" href="css/style_principal.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert("Bienvenido has iniciado sesion");
+    </script>
+    <main>
+        <div class="seccion-h">
+            <a href="landing_hombres.html">
+                <img src="images/hombres-2.jpg" alt="" >
+            </a>
+            <h4>Hombres</h4>
+        </div>
+        <div class="seccion-m">
+            <a href="landing_mujeres.html">
+                <img src="images/mujeres-1.jpg" alt="">
+            </a>
+            <h4 >Mujeres</h4>
+        </div>
+    </main>
+</body>
+</html>
+<?php
+} else {
+    header("location:index.php");
+    }
+ ?>
